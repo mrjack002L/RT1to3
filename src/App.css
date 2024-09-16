@@ -114,7 +114,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(135deg, #21a0f6 0%, #61dafb 100%);
+  background: linear-gradient(135deg, #8e979c 0%, #61dafb 100%);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
   transform: translateY(-2px); /* Slight lift effect */
 }
@@ -123,6 +123,20 @@ button:active {
   background: linear-gradient(135deg, #1a8cd8 0%, #4a9cf6 100%);
   box-shadow: 0 4px 8px rgba(245, 233, 233, 0.2); /* Subtle shadow on active */
   transform: translateY(1px); /* Slight dip effect */
+}
+
+/* Disabled Button */
+button:disabled {
+  background: #d0d0d0; /* Light grey background for disabled state */
+  color: #a0a0a0; /* Darker grey text color */
+  cursor: not-allowed; /* Show a not-allowed cursor */
+  box-shadow: none; /* Remove shadow */
+  transform: none; /* No transformation */
+}
+
+button:disabled:hover,
+button:disabled:active {
+  background: #d0d0d0; /* Same background on hover and active states */
 }
 
 /* Responsive Design */
