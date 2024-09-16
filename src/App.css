@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%);
+  color: #333;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.app-header {
+  background: linear-gradient(135deg, #89f558 0%, #61dafb 100%);
+  color: #ffffff;
+  width: 100%;
+  padding: 40px 20px; /* Increased padding */
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  border-radius: 12px;
+  margin-bottom: 40px;
+  transform: rotateX(2deg); /* Slight 3D tilt */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-header h1 {
+  margin: 0;
+  font-size: 3em; /* Increased font size */
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Enhanced text shadow */
+}
+
+.app-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 30px; /* Increased padding */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transform: rotateX(-1deg); /* Slight 3D tilt */
+}
+
+/* Task Sections */
+.task-section {
+  width: 100%; /* Ensure full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align section content */
+  margin-bottom: 60px;
+}
+
+.task-section h2 {
+  font-size: 2.6em; /* Increased font size */
+  color: #282c34;
+  border-bottom: 4px solid #61dafb; /* Thicker border */
+  padding-bottom: 20px; /* Increased padding */
+  margin-bottom: 40px; /* Increased margin */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(154, 30, 30, 0.2); /* Subtle shadow for text */
+}
+
+/* Task Containers */
+.task-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap tasks to next line if needed */
+  justify-content: center; /* Center tasks horizontally */
+  gap: 30px; /* Increased space between tasks */
+}
+
+.task {
+  background: #f0f5d9;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  padding: 30px; /* Increased padding */
+  width: 350px; /* Larger width for task boxes */
+  max-width: 100%; /* Ensure tasks fit within their container */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  transform: rotateY(2deg); /* Slight 3D rotation */
+}
+
+.task:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: rotateY(5deg) translateY(-5px); /* Subtle 3D rotation and lift */
+}
+
+.task h3 {
+  font-size: 2em; /* Larger font size */
+  color: #333;
+  margin-bottom: 20px; /* Increased margin below the title */
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+}
+
+/* Buttons */
+button {
+  font-size: 1.1em; /* Increased font size */
+  font-weight: bold;
+  padding: 12px 24px; /* Increased padding */
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #61dafb 0%, #21a0f6 100%);
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #21a0f6 0%, #61dafb 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+  background: linear-gradient(135deg, #1a8cd8 0%, #4a9cf6 100%);
+  box-shadow: 0 4px 8px rgba(245, 233, 233, 0.2); /* Subtle shadow on active */
+  transform: translateY(1px); /* Slight dip effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app-header h1 {
+    font-size: 2.4em; /* Adjusted font size */
+  }
+
+  .app-content {
+    padding: 20px; /* Adjusted padding */
+  }
+
+  .task-section h2 {
+    font-size: 2em; /* Adjusted font size */
+  }
+
+  .task h3 {
+    font-size: 1.6em; /* Adjusted font size */
+  }
+
+  .task {
+    padding: 20px; /* Adjusted padding */
+    width: 300px; /* Adjusted width */
   }
 }
